@@ -101,7 +101,7 @@ def twoPlayer():
 def onePlayer():
 
     with open("1000randomwords.txt") as f:
-        words = [word.strip() for word in f if len(word.strip()) >= 5] #using for statement!!?!?!!?
+        words = [word.strip() for word in f if len(word.strip()) >= 5]
         computer = (random.choice(words))
 
     guess = print(f"This word has", len(computer), "letters. Try to guess: ")
