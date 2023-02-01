@@ -104,28 +104,7 @@ def onePlayer():
         words = [word.strip() for word in f if len(word.strip()) >= 5] #using for statement!!?!?!!?
         computer = (random.choice(words))
 
-    guess = print(f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"\n"
-                  f"This word has", len(computer), "letters. Try to guess: ")
+    guess = print(f"This word has", len(computer), "letters. Try to guess: ")
 
     guessed_Word = input()
 
