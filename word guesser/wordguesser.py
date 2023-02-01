@@ -109,8 +109,10 @@ def onePlayer():
     guessed_Word = input()
 
     while guessed_Word != computer:
+        
         if guessed_Word == computer:
                 print(f"You got it right! The word was {computer}!")
+                break
 
         if guessed_Word != computer:
             print(f"The first letter is: {computer[0]}")
@@ -147,6 +149,7 @@ def onePlayer():
             if fifth_Guess != computer:
                 print(f"The fifth letter is: {computer[4]}")
                 print(f"You ran out of guesses! The word was {computer}! Try again next time!")
+                break
 
             if fifth_Guess == computer:
                 print(f"You got it right! The word was {computer}!")
