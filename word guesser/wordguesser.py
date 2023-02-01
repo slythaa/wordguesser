@@ -5,7 +5,7 @@ import random
 #but can also serve as an integer for a word. idk how i missed this, now that i look back its such a dumb thing
 #theres probably a way to do this more cleaner and with less if statements, but it works so idk
 
-one_Or_Two = input("One or two players? (1/2): ")
+
 
 def twoPlayer():
 
@@ -156,25 +156,24 @@ def onePlayer():
 
 
 
+playing = ""
 
+while playing != "n":
 
-if one_Or_Two == "2":
-    twoPlayer()
+    one_Or_Two = input("One or two players? (1/2): ")
 
-elif one_Or_Two == "1":
-    onePlayer()
+    if one_Or_Two == "1":
+        onePlayer()
+        break
 
-if one_Or_Two != "1" and "2":
+    elif one_Or_Two == "2":
+        twoPlayer()
+        break
 
-    while True:
+playing = input("Again?(y/n): ")
 
-        one_Or_Two = input("One or two players? (1/2): ")
-
-        if one_Or_Two == "1":
-            break
-
-        elif one_Or_Two == "2":
-            break
+if playing == "n":
+    print("Thanks for playing!")
 
 
 
