@@ -101,7 +101,7 @@ def twoPlayer():
 def onePlayer():
 
     with open("1000randomwords.txt") as f:
-        words = [word.strip() for word in f if len(word.strip()) >= 5]
+        words = [word.strip() for word in f if len(word.strip()) >= 5] #using for statement!!?!?!!?
         computer = (random.choice(words))
 
     guess = print(f"This word has", len(computer), "letters. Try to guess: ")
@@ -109,10 +109,9 @@ def onePlayer():
     guessed_Word = input()
 
     while guessed_Word != computer:
-        
         if guessed_Word == computer:
-                print(f"You got it right! The word was {computer}!")
-                break
+            print(f"You got it right! The word was {computer}!")
+            break
 
         if guessed_Word != computer:
             print(f"The first letter is: {computer[0]}")
@@ -164,6 +163,19 @@ if one_Or_Two == "2":
 
 elif one_Or_Two == "1":
     onePlayer()
+
+if one_Or_Two != "1" and "2":
+
+    while True:
+
+        one_Or_Two = input("One or two players? (1/2): ")
+
+        if one_Or_Two == "1":
+            break
+
+        elif one_Or_Two == "2":
+            break
+
 
 
 
